@@ -1,0 +1,14 @@
+h1 {
+  color: black;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+p {
+  color: darkgoldenrod;
+  max-width: 75ch;
+}
+
