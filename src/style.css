@@ -3,42 +3,129 @@
   padding: 0;
 }
 
-.body {
+body {
   display: grid;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 450px auto 5vh;
+  background-color: rgb(239, 241, 184);
 }
 
+/* #region header */
+
 .header {
-  display: flex;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  background-color: black;
+  justify-items: center;
+  height: 10%;
+}
+
+.header__logo {
+  grid-column-start: 2;
+  height: 300px;
+  width: 300px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .tab-bar {
+  grid-column-start: 2;
+  grid-row-start: 2;
   display: flex;
-  height: 50%;
-  width: 5%;
-  background-color: azure;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
 }
 
 .tab-bar__home,
 .tab-bar__menu,
 .tab-bar__contact {
+  height: 33%;
+  width: 25%;
   background-color: brown;
 }
 
+/* #endregion header*/
+
+/* #region home */
+
 .home {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
-.home__image {
+.hero {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero__image {
   height: 300px;
   width: 300px;
 }
 
-.home__header {}
+.hero__text {}
 
-.home__description {}
+.introduction {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.introduction__content {}
+
+.introduction__headLine {}
+
+.introduction__description {}
+
+.introduction__image {
+  height: 300px;
+  width: 300px;
+}
+
+.opening-hours {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.opening-hours__image {
+  height: 300px;
+  width: 300px;
+}
+
+.opening-hours__conntainer {}
+
+.opening-hours__header {}
+
+.opening-hours____list {}
+
+.opening-hours__list-item {}
+
+.opening-hours__footer {}
+
+.location {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location__address {}
+
+.location__image {
+  height: 300px;
+  width: 300px;
+}
+
+/* #endregion home */
+
+/* #region menu */
+
+/* #endregion menu */
+
+/* #region contact */
+
+/* #endregion contact */
