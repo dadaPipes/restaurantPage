@@ -5,8 +5,9 @@
 
 body {
   display: grid;
-  grid-template-rows: 450px auto 5vh;
-  background-color: rgb(239, 241, 184);
+  grid-template-rows: repeat(3, auto);
+  background-color: rgb(239, 240, 223);
+  padding: 2%;
 }
 
 /* #region header */
@@ -25,8 +26,6 @@ body {
   grid-column-start: 2;
   height: 300px;
   width: 300px;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .tab-bar {
@@ -44,7 +43,7 @@ body {
 .tab-bar__contact {
   height: 33%;
   width: 25%;
-  background-color: brown;
+  background-color: rgb(244, 209, 10);
 }
 
 /* #endregion header*/
@@ -53,71 +52,114 @@ body {
 
 .home {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: row;
+  gap: 2%;
 }
 
 .hero {
-  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 
 .hero__image {
-  height: 300px;
-  width: 300px;
-}
+  display: grid;
+  align-items: center;
+  height: 10rem;
+  width: 16rem;
+ }
 
-.hero__text {}
+.hero__text {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 4rem;
+}
 
 .introduction {
-  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 
-.introduction__content {}
+.introduction-content {
+  margin: 5% 5% 5% 0%;
+}
 
-.introduction__headLine {}
-
-.introduction__description {}
+.introduction__description {
+  max-width: 50ch;
+}
 
 .introduction__image {
-  height: 300px;
-  width: 300px;
+  height: 28rem;
+  width: 24rem;
 }
 
 .opening-hours {
-  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 
 .opening-hours__image {
-  height: 300px;
-  width: 300px;
+  height: 20rem;
+  width: 20rem;
 }
 
-.opening-hours__conntainer {}
+.opening-hours__container {
+}
 
-.opening-hours__header {}
+.opening-hours__header {
+  column-span: all;
+}
 
-.opening-hours____list {}
+.opening-hours__list {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
-.opening-hours__list-item {}
+.opening-hours__list-item {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
 
-.opening-hours__footer {}
+.opening-hours__day {
+  flex: 1;
+}
+
+.opening-hours__hours {
+  flex: 1;
+  text-align: right;
+}
+
+.opening-hours__footer {
+  column-span: all;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
 .location {
-  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.location__header {
+  margin-bottom: 5%;
 }
 
 .location__address {}
 
 .location__image {
-  height: 300px;
-  width: 300px;
+  height: 10rem;
+  width: 14rem;
 }
 
 /* #endregion home */
@@ -129,3 +171,12 @@ body {
 /* #region contact */
 
 /* #endregion contact */
+
+/* #region footer*/
+
+.footer {
+  text-align: center;
+  margin: 5%;
+}
+
+/* #region footer*/
