@@ -1,7 +1,8 @@
-import { createHomePageContent } from './createHomePageContent.js';
-import { createMenuPageContent } from './createMenuPageContent.js';
-import { createContactPageContent } from './createContactPageContent.js';
-import './style.css';
+import { createHomePageContent }    from './scripts/createHomePageContent.js';
+import { createMenuPageContent }    from './scripts/createMenuPageContent.js';
+import { createContactPageContent } from './scripts/createContactPageContent.js';
+import { createPageFooterContent }  from './scripts/createFooterPageContent.js';
+import './styles/index.css';
 import logoImage from './images/logo.png';
 import fallBackImg from './images/default-image.svg';
 
@@ -9,17 +10,17 @@ import fallBackImg from './images/default-image.svg';
 const header = document.createElement('header');
 header.classList.add('header');
 
+// logo
 const logo = document.createElement('img');
 logo.classList.add('header__logo');
 logo.src = logoImage;
 logo.alt = 'restaurant logo. pig dressed like a chef';
-header.appendChild(logo);
 
+// tab-bar
 const tabBar = document.createElement('div');
 tabBar.classList.add('tab-bar');
-header.appendChild(tabBar);
 
-// home
+// header-home-button
 const home = document.createElement('button');
 home.classList.add('tab-bar__home');
 home.setAttribute('type', 'button');
@@ -29,9 +30,8 @@ home.addEventListener('click', () => {
   currentContent.replaceWith(newContent);
   currentContent = newContent;
 });
-tabBar.appendChild(home);
 
-// menu
+// header-menu-button
 const menu = document.createElement('button');
 menu.classList.add('tab-bar__menu');
 menu.setAttribute('type', 'button');
@@ -41,9 +41,8 @@ menu.addEventListener('click', () => {
   currentContent.replaceWith(newContent);
   currentContent = newContent;
 });
-tabBar.appendChild(menu);
 
-// contact
+// header-contact-button
 const contact = document.createElement('button');
 contact.classList.add('tab-bar__contact');
 contact.setAttribute('type', 'button');
@@ -53,20 +52,18 @@ contact.addEventListener('click', () => {
   currentContent.replaceWith(newContent);
   currentContent = newContent;
 });
+
+// footer
+const footer = createPageFooterContent();
+
+header.appendChild(logo);
+header.appendChild(tabBar);
+tabBar.appendChild(home);
+tabBar.appendChild(menu);
 tabBar.appendChild(contact);
 
 let currentContent = createHomePageContent();
 
-// footer
-const footer = document.createElement('footer');
-footer.classList.add('footer');
-
-const content = document.createElement('p');
-content.classList.add('footer__context');
-content.textContent = 'some footer text';
-footer.appendChild(content);
-
-// body
 document.body.appendChild(header);
 document.body.appendChild(currentContent);
 document.body.appendChild(footer);
@@ -78,5 +75,3 @@ images.forEach(img => {
   img.src = fallBackImg;
  };
 });
-
-

@@ -1,3 +1,5 @@
+import styles from '../styles/createContactPageContent.css'; 
+
 export function createContactPageContent() {
   const container = document.createElement('div');
   container.classList.add('contact');

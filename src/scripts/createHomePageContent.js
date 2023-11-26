@@ -1,9 +1,11 @@
-import bird from './images/bird.jpg';
-import restaurantFront from './images/restaurant-front.jpg';
-import restaurant1 from './images/restaurant1.jpg';
-import restaurant2 from './images/restaurant2.jpg';
-import restaurant3 from './images/restaurant3.jpg';
+import bird from '../images/bird.jpg';
+import restaurantFront from '../images/restaurant-front.jpg';
+import restaurant1 from '../images/restaurant1.jpg';
+import restaurant2 from '../images/restaurant2.jpg';
+import restaurant3 from '../images/restaurant3.jpg'; 
+import styles from '../styles/createHomePageContent.css';
 
+// hero
 function createHeroSection() {
   const hero = document.createElement('section');
   hero.classList.add('hero');
@@ -22,6 +24,7 @@ function createHeroSection() {
   return hero;
 }
 
+// introduction
 function createIntroductionSection() {
   const introduction = document.createElement('section');
   introduction.classList.add('introduction');
@@ -44,6 +47,7 @@ function createIntroductionSection() {
   return introduction;
 }
 
+//opening-hours
 function createOpeningHoursSection() {
   const openingHours = document.createElement('section');
   openingHours.classList.add('opening-hours');
@@ -54,7 +58,7 @@ function createOpeningHoursSection() {
   image.alt = ''; /* TODO */
 
   const container = document.createElement('div');
-  container.classList.add('opening-hours__container');
+  container.classList.add('opening-hours__content');
 
   const header = document.createElement('h2');
   header.classList.add('opening-hours__header');
@@ -108,6 +112,7 @@ function createOpeningHoursSection() {
   return openingHours;
 }
 
+// location
 function createLocationSection() {
   const location = document.createElement('section');
   location.classList.add('location');
