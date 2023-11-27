@@ -4,6 +4,12 @@
   grid-auto-flow: row;
 }
 
+.home > * {
+  margin: 1%;
+  padding: 2%;
+  background-color: blanchedalmond;
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -14,8 +20,8 @@
 .hero__image {
   display: grid;
   align-items: center;
-  height: 10rem;
-  width: 16rem;
+  height: 12rem;
+  width: 14rem;
  }
 
 .hero__text {
