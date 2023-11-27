@@ -2,7 +2,11 @@
   
 }
 
-.menu__header {}
+.menu__header {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 2%;
+}
 
 .menu__content {
   display: grid;
@@ -11,25 +15,33 @@
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 60%;
-  border: 0.2rem solid black;
+  margin: 1%;
+  padding: 2%;
+  background-color: blanchedalmond;
 }
 
 .card {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  justify-content: left;
-  height: 12rem;
-  padding: 1%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.card:last-child {
+  margin-bottom: 0;
 }
 
 .card__image {
-  height: 100%;
-  width: 16rem;
+  height: 200px;
+  width: 200px;
+  min-width: 200px;
 }
 
 .card__content {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 2%;
 }
 
