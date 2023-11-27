@@ -9,19 +9,19 @@ export function createMenuPageContent() {
     return menu;
   }
 
-  function createHeader() {
-    const header = document.createElement('h1');
-    header.classList.add('menu__header');
-    header.textContent = 'Our Menu';
-
-    return header;
-  }
-
   function createMenuContent() {
     const menuContent = document.createElement('div');
     menuContent.classList.add('menu__content');
 
     return menuContent;
+  }
+
+  function createMenuHeader(menuHeader) {
+    const header = document.createElement('h1');
+    header.classList.add('menu__header');
+    header.textContent = menuHeader;
+
+    return header;
   }
 
   function createMenuList(items) {
@@ -135,17 +135,21 @@ export function createMenuPageContent() {
     description: 'Caramelized apples topped with a dollop of whipped cream, offering a simple yet satisfying dessert option.' },
   ];
     
-  const menuSection   = createMenuSection();
-  const header        = createHeader();
-  const menuContent   = createMenuContent();
-  const starterMenu   = createMenuList(starterMenuItems);
-  const mainMenu      = createMenuList(mainMenuItems);
-  const dessertMenu   = createMenuList(dessertMenuItems);
+  const menuSection       = createMenuSection();
+  const menuContent       = createMenuContent();
+  const starterMenuHeader = createMenuHeader('Starters');
+  const starterMenu       = createMenuList(starterMenuItems);
+  const mainMenuHeader    = createMenuHeader('Main');
+  const mainMenu          = createMenuList(mainMenuItems);
+  const dessertMenuHeader = createMenuHeader('Desserts');
+  const dessertMenu       = createMenuList(dessertMenuItems);
   
-  menuSection.appendChild(header);
   menuSection.appendChild(menuContent);
+  menuContent.appendChild(starterMenuHeader);
   menuContent.appendChild(starterMenu);
+  menuContent.appendChild(mainMenuHeader);
   menuContent.appendChild(mainMenu);
+  menuContent.appendChild(dessertMenuHeader);
   menuContent.appendChild(dessertMenu);
   
   return menuSection;
