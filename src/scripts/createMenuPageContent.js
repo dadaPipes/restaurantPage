@@ -152,7 +152,6 @@ const mainMenuItems = [
   },
 ];
 
-
 const dessertMenuItems = [
   { 
       image: 'https://mad.winther.nu/image/300x400/4fb97e6e-4125-4654-b0fe-22de67d7b352.jpg', 
@@ -192,7 +191,6 @@ const dessertMenuItems = [
   },
 ];
 
-    
   const menuSection       = createMenuSection();
   const menuContent       = createMenuContent();
   const starterMenuHeader = createMenuHeader('Starters');

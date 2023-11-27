@@ -42,9 +42,14 @@
 .card__content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 2%;
 }
 
 .card__name {}
 
 .card__description {}
+
+.card__price {
+  font-weight: bold;
+}
