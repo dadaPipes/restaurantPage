@@ -55,6 +55,7 @@ contact.addEventListener('click', () => {
 
 // footer
 const footer = createPageFooterContent();
+footer.classList.add('footer')
 footer.style.textAlign = 'center';
 
 header.appendChild(logo);

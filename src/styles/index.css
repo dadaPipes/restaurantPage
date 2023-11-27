@@ -36,9 +36,7 @@ body {
   width: 100%;
 }
 
-.tab-bar__home,
-.tab-bar__menu,
-.tab-bar__contact {
+.tab-bar > * {
   height: 33%;
   width: 25%;
   background-color: rgb(244, 209, 10);
