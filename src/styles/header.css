@@ -1,0 +1,31 @@
+.header {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 10%;
+}
+
+.header__logo {
+  grid-column-start: 2;
+  height: 300px;
+  width: 300px;
+}
+
+.main-nav {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.main-nav > * {
+  height: 33%;
+  width: 25%;
+  background-color: rgb(244, 209, 10);
+}
